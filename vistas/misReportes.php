@@ -1,4 +1,6 @@
-<?php include_once 'header.php'; ?>
+<?php include_once 'header.php';
+  if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 1){  
+ ?>
 <!-- Page Content -->
 <div class="container">
   <div class="card border-0 shadow my-5">
@@ -7,4 +9,9 @@
       <p class="lead">Contenido!</p>   
   </div>
 </div>
-<?php include_once 'footer.php'; ?>
+
+<?php include_once 'footer.php';
+   }else{
+      header("location:../index.html");
+   }
+ ?>
