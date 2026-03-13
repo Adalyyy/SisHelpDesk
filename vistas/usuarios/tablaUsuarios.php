@@ -39,9 +39,10 @@
         <th>Telefono</th>
         <th>Correo</th>
         <th>Usuario</th>
+        <th>Ubicacion</th>
         <th>Reset Password</th>
         <th>Cambiar Rol de usuario</th>
-        <th>Ubicacion</th>
+        
         <th>Editar</th>
         <th>Eliminar</th>
 
@@ -61,6 +62,7 @@
                 <td><?php echo $mostrar['telefono']; ?></td>
                 <td><?php echo $mostrar['correo']; ?></td>
                 <td><?php echo $mostrar['usuario']; ?></td>
+                <td><?php echo $mostrar['ubicacion']; ?></td>
                 <td>
                     <button class="btn btn-success btn-sm">
                         Cambiar Password
@@ -71,12 +73,8 @@
                         Cambiar Rol
                     </button>
                 </td>
-                <td><?php echo $mostrar['ubicacion']; ?></td>
-                <td>
-                    <button class="btn btn-warning btn-sm">
-                        Editar
-                    </button>
-                </td>
+
+                <td><button class="btn btn-warning btn-sm"> Editar </button></td>
                 <td>
                     <button class="btn btn-danger btn-sm">
                         ELiminar
