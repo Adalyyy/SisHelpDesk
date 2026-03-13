@@ -42,7 +42,7 @@
         <th>Ubicacion</th>
         <th>Reset Password</th>
         <th>Cambiar Rol de usuario</th>
-        
+        <th>Activar</th>
         <th>Editar</th>
         <th>Eliminar</th>
 
@@ -72,6 +72,23 @@
                     <button class="btn btn-primary btn-sm">
                         Cambiar Rol
                     </button>
+                </td>
+
+                <td>
+                    <?php
+                      if ($mostrar['estatus']==1){
+                    ?>
+                        <button class="btn btn-info btn-sm">
+                            Activo
+                        </button>
+                    <?php 
+                        }else{
+                     ?> 
+                        <button class="btn btn-info btn-sm">
+                            Inactivo
+                        </button>
+                    <?php      
+                        }?>
                 </td>
 
                 <td><button class="btn btn-warning btn-sm"> Editar </button></td>
