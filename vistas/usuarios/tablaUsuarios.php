@@ -28,7 +28,8 @@
     $respuesta = mysqli_query($conexion, $sql);        
 
 ?>
-<table class="table table-sm" id="tablaUsuariosDataTable">
+<table class="table table-sm dt-responsive nowrap" 
+        id="tablaUsuariosDataTable" style="width:100%">
     <thead>
         <th>Apellido Paterno</th>
         <th>Apellido Materno</th>
