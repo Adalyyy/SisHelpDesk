@@ -20,6 +20,9 @@
 <?php
  include_once 'usuarios/modalAgregar.php';
  include_once 'footer.php';
+?>
+<script src="../public/js/usuarios/usuarios.js"></script>
+<?php
    }else{
       header("location:../index.html");
    }
