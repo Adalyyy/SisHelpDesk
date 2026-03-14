@@ -1,5 +1,5 @@
-<!-- Modal -->
-<div class="modal fade" id="modalAsignarEquipo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<form id="frmAsigaEquipo" method="POST" onsubmit="return asignarEquipo()">
+  <div class="modal fade" id="modalAsignarEquipo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
@@ -14,14 +14,37 @@
             <div class="row">
               <div class="col-sm-6">
                 <label>Nombre de la persona</label>
+                <?php
+                    $sql="SELECT 
+                              id_persona,
+                              CONCAT(paterno, ' ',materno, ' ',nombre) AS nombre
+
+                            FROM
+                              t_persona ORDER BY paterno";
+                    $respuesta=mysqli_query($conexion, $sql);
+                ?>
                 <select name="idPersona" id="idPersona" class="form-control" required>
-                  <option value=""></option>
+                  <option value="">Selcciona una opcion</option> 
+                   <?php while($mostrar=mysqli_fetch_array($respuesta)){?>
+                   <option value="<?php echo $mostrar['id_persona']?>"><?php echo $mostrar['nombre'] ?></option>
+                   <?php } ?>
                 </select>
               </div>
+
               <div class="col-sm-6">
                 <label>Tipo de equipo</label>
+                <?php  
+                  $sql="SELECT id_equipo,
+                              nombre
+                        FROM
+                              t_cat_equipo ORDER BY nombre";
+                  $respuesta=mysqli_query($conexion, $sql);            
+                ?>
                 <select name="idEquipo" id="idEquipo" class="form-control" required>
-                  <option value=""></option>
+                  <option value="">Selcciona una opcion</option>
+                   <?php while($mostrar=mysqli_fetch_array($respuesta)){?>
+                   <option value="<?php echo $mostrar['id_equipo']?>"><?php echo $mostrar['nombre'] ?></option>
+                   <?php } ?>
                 </select>
               </div>
             </div>
@@ -66,9 +89,11 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Asignar</button>
           </div>
         </div>
     </div>
-</div>
+  </div>
+
+</form>
