@@ -117,6 +117,14 @@
             return $datos;
         }
 
+        public function actualizarUsuario($datos){
+            $conexion = Conexion::conectar();
+        }
+
+         public function actualizarPersona($datos){
+            
+         }
+
     }
 
     

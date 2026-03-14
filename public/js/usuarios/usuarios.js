@@ -43,9 +43,20 @@ function obtenerDatosUsuario(idUsuario){
             $('#correou').val(respuesta['correo']);
             $('#usuariou').val(respuesta['usuario']);
             $('#idRolu').val(respuesta['idRol']);
-            $('#ubicacionu').val(respuesta['ubicacion']);
-            
+            $('#ubicacionu').val(respuesta['ubicacion']);        
         }
     });
+}
 
+function actualizarUsuario(){
+
+    $.ajax({
+        type: "POST",
+        data: $('#frmActualizarUsuario').serialize(),
+        url: "../procesos/usuarios/crud/actualizarUsuario.php",
+        success:function(respuesta){
+            console.log(respuesta);
+        }     
+    });
+   return false;
 }
