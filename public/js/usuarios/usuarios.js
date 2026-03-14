@@ -24,3 +24,20 @@ function agregarNuevoUsuario(){
     return false;
 }
 
+function obtenerDatosUsuario(idUsuario){
+    //alert(idUsuario);
+    $.ajax({
+        type: "POST",
+        data: "idUsuario=" + idUsuario,
+        url: "../procesos/usuarios/crud/obtenerDatosUsuario.php",
+        success:function(respuesta){
+
+            console.log(respuesta);
+            respuesta = JSON.parse(respuesta);
+            //respuesta = jQuery.parseJSON(respuesta);
+            console.log(respuesta);
+            
+        }
+    });
+
+}

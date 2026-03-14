@@ -19,6 +19,7 @@
 
 <?php
  include_once 'usuarios/modalAgregar.php';
+ include "usuarios/modalActualizar.php";
  include_once 'footer.php';
 ?>
 

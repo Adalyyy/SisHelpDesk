@@ -35,13 +35,12 @@
         <th>Apellido Materno</th>
         <th>Nombre</th>
         <th>Edad</th>
-        <th>Sexo</th>
+        <th>Ubicacion</th>     
         <th>Telefono</th>
         <th>Correo</th>
-        <th>Usuario</th>
-        <th>Ubicacion</th>
+        <th>Usuario</th>        
+        <th>Sexo</th>
         <th>Reset Password</th>
-        <th>Cambiar Rol de usuario</th>
         <th>Activar</th>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -58,21 +57,24 @@
                 <td><?php echo $mostrar['materno']; ?></td>
                 <td><?php echo $mostrar['nombrePersona']; ?></td>
                 <td><?php echo $mostrar['fechaNacimiento']; ?></td>
-                <td><?php echo $mostrar['sexo']; ?></td>
+                <td><?php echo $mostrar['ubicacion']; ?></td>
                 <td><?php echo $mostrar['telefono']; ?></td>
                 <td><?php echo $mostrar['correo']; ?></td>
-                <td><?php echo $mostrar['usuario']; ?></td>
-                <td><?php echo $mostrar['ubicacion']; ?></td>
+                <td><?php echo $mostrar['usuario']; ?></td>          
+                <td><?php echo $mostrar['sexo']; ?></td>
+
                 <td>
                     <button class="btn btn-success btn-sm">
                         Cambiar Password
                     </button>
                 </td>
-                <td>
+
+                <!-- <td>
                     <button class="btn btn-primary btn-sm">
                         Cambiar Rol
                     </button>
-                </td>
+                </td> -->
+
 
                 <td>
                     <?php
@@ -91,7 +93,11 @@
                         }?>
                 </td>
 
-                <td><button class="btn btn-warning btn-sm"> Editar </button></td>
+                <td><button class="btn btn-warning btn-sm" 
+                            data-toggle="modal" data-target="#modalActualizarUsuarios"
+                            onclick="obtenerDatosUsuario(<?php echo $mostrar['idUsuario'] ?>)"> 
+                            Editar 
+                    </button></td>
                 <td>
                     <button class="btn btn-danger btn-sm">
                         ELiminar
