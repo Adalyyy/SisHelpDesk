@@ -33,8 +33,8 @@ function obtenerDatosUsuario(idUsuario){
         success:function(respuesta){
 
             console.log(respuesta);
-            respuesta = JSON.parse(respuesta);
-            //respuesta = jQuery.parseJSON(respuesta);
+            //respuesta = JSON.parse(respuesta);
+            respuesta = jQuery.parseJSON(respuesta);
             console.log(respuesta);
             
         }
