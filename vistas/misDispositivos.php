@@ -30,7 +30,8 @@
                 asignacion.descripcion AS descripcion,
                 asignacion.memoria AS memoria,
                 asignacion.disco_duro AS discoDuro,
-                asignacion.procesador AS procesador
+                asignacion.procesador AS procesador,
+                equipo.descripcion AS imagen
             FROM
                 t_asignacion AS asignacion
                     INNER JOIN
@@ -53,20 +54,20 @@
           <div class="row">
             <?php while($mostrar=mysqli_fetch_array($respuesta)){?>
 
-        
             <div class="col-sm-4">
               
                 <div class="card bg-light mb-3" style="max-width: 18rem;">
                   <div class="card-header"><?php echo $mostrar['nombreEquipo']?></div>
                     <div class="card-body">
-                      <p><?php echo $mostrar['descripcion'] ?></p>
+    
+                      <p><span class="<?php echo $mostrar['imagen'];?>"></span><?php echo $mostrar['descripcion'] ?></p>
                       <ul>
-                        <li><?php echo $mostrar['marca']?></li>
-                        <li><?php echo $mostrar['modelo']?></li>
-                        <li><?php echo $mostrar['color']?></li>
-                        <li><?php echo $mostrar['memoria']?></li>
-                        <li><?php echo $mostrar['discoDuro']?></li>
-                        <li><?php echo $mostrar['procesador']?></li>
+                        <li>Marca: <?php echo $mostrar['marca']?></li>
+                        <li>Modelo: <?php echo $mostrar['modelo']?></li>
+                        <li>Color: <?php echo $mostrar['color']?></li>
+                        <li>Memoria: <?php echo $mostrar['memoria']?></li>
+                        <li>Disco duro: <?php echo $mostrar['discoDuro']?></li>
+                        <li>Procesador: <?php echo $mostrar['procesador']?></li>
                       </ul>
                     </div>
                   </div>
