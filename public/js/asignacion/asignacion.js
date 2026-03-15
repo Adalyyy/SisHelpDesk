@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $('#tablaAsignacionLoad').load("asignacion/tablaAsignacion.php");
+    
+
+});
+
 function asignarEquipo(){
     $.ajax({
         type: "POST",
@@ -14,10 +20,8 @@ function asignarEquipo(){
                 Swal.fire(":(","No se pudo asignar,fallo" + respuesta ,"error");
             }
 
-
         }
      
     });
-
     return false;
 }
