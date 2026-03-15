@@ -26,23 +26,33 @@ function asignarEquipo(){
 }
 
 function eliminarAsignacion(idAsignacion){
-    $.ajax({
-        type:"POST",
-        data:'idAsignacion=' + idAsignacion,
-        url:"../procesos/asignacion/eliminarAsignacion.php",
-        success:function (respuesta) {
-            if(respuesta==1){
-                
-                $('#tablaAsignacionLoad').load("asignacion/tablaAsignacion.php");
-                Swal.fire(":)","Eliminado con exito","success");
-            }else{
-                Swal.fire(":(","Fallo al eliminar" + respuesta ,"error");
-            }
-            
-        }
+        Swal.fire({
+        title: "Estas seguro de eliminar este registro?",
+        text: "Una vez eliminido no sepodra recuperar!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, eliminar!"
+        }).then((result) => {
 
-    });
-
+            if (result.isConfirmed){
+                $.ajax({
+                    type:"POST",
+                    data:'idAsignacion=' + idAsignacion,
+                    url:"../procesos/asignacion/eliminarAsignacion.php",
+                    success:function (respuesta) {
+                        if(respuesta==1){
+                            
+                            $('#tablaAsignacionLoad').load("asignacion/tablaAsignacion.php");
+                            Swal.fire(":)","Eliminado con exito","success");
+                        }else{
+                            Swal.fire(":(","Fallo al eliminar" + respuesta ,"error");
+                        }    
+                    }
+                });
+            }      
+        })  
     return false;
-
 }
+    
