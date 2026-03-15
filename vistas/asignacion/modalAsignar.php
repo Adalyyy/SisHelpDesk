@@ -16,11 +16,14 @@
                 <label>Nombre de la persona</label>
                 <?php
                     $sql="SELECT 
-                              id_persona,
-                              CONCAT(paterno, ' ',materno, ' ',nombre) AS nombre
-
-                            FROM
-                              t_persona ORDER BY paterno";
+                              persona.id_persona,
+                              CONCAT(paterno, ' ', materno, ' ', nombre) AS nombre
+                          FROM
+                              t_persona AS persona
+                                  INNER JOIN
+                              t_usuarios AS usuario ON persona.id_persona = usuario.id_persona
+                                  AND usuario.id_rol = 1
+                          ORDER BY persona.paterno";
                     $respuesta=mysqli_query($conexion, $sql);
                 ?>
                 <select name="idPersona" id="idPersona" class="form-control" required>
@@ -90,7 +93,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Asignar</button>
+            <button class="btn btn-primary">Asignar</button>
           </div>
         </div>
     </div>

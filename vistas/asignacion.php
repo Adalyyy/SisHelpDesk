@@ -22,9 +22,13 @@
    </div>
 </div>
 
+  <?php
+  include_once 'asignacion/modalAsignar.php';
+  include_once 'footer.php';
+  ?>
+  <script src="../public/js/asignacion/asignacion.js"></script>
+
 <?php
-include_once 'asignacion/modalAsignar.php';
-include_once 'footer.php';
   }else{
     header("location:../index.html");
   }

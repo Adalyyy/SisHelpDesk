@@ -59,7 +59,7 @@ function actualizarUsuario(){
             respuesta=respuesta.trim();
             if (respuesta==1){
                 $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php");
-                Swal.fire("Actualizado con exito", "success");
+                Swal.fire(":)","Actualizado con exito", "success");
                 $('#modalActualizarUsuarios').modal('hide');
 
             }else{
