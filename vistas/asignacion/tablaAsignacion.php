@@ -69,3 +69,10 @@
         ?>
     </tbody>
 </table>
+
+<script>
+    $(document).ready(function(){
+        $('#tablaAsignacionDataTable').DataTable();
+    });
+
+</script>

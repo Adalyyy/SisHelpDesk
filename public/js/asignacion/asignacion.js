@@ -15,6 +15,7 @@ function asignarEquipo(){
 
             if(respuesta==1){
                 $('#frmAsigaEquipo')[0].reset();
+                $('#tablaAsignacionLoad').load("asignacion/tablaAsignacion.php");
                 Swal.fire(":)","Asignado con exito","success");
             }else{
                 Swal.fire(":(","No se pudo asignar,fallo" + respuesta ,"error");
