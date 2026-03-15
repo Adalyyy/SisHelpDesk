@@ -1,16 +1,33 @@
 <?php include_once 'header.php';
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 1){  
+    include '../clases/Conexion.php';
+      $con= new Conexion();
+      $conexion = $con->conectar();
  ?>
-<!-- Page Content -->
-<div class="container">
-  <div class="card border-0 shadow my-5">
-    <div class="card-body p-5">
-      <h1 class="fw-light">Mis Reportes</h1>
-      <p class="lead">Contenido!</p>   
-  </div>
-</div>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+        <h1 class="fw-light">Repotes de clientes</h1>
+        <p class="lead">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalCrearReporte">
+            Crear Reporte
+          </button>
+          <hr>
+          <div id="tablaReporteClienteLoad"> </div>
 
-<?php include_once 'footer.php';
+        </p>   
+    </div>
+  </div>
+
+<?php 
+include 'reportesClientes/modalCrearReportes.php';
+include_once 'footer.php';
+?>
+<script src="../public/js/reportesCliente/reportesCliente.js"></script>
+
+<?php
+
    }else{
       header("location:../index.html");
    }
