@@ -1,4 +1,4 @@
-<form method="POST" id="frmNuevoReporte" onclick="return agregarNuevoReporte()">
+<form method="POST" id="frmNuevoReporte" onsubmit="return agregarNuevoReporte()">
 
   <div class="modal fade" id="modalCrearReporte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -35,11 +35,14 @@
             <option value="">Seleccione un dispositivo</option>
 
             <?php while($mostrar=mysqli_fetch_array($respuesta)){?>
-            <option value=""><?php $mostrar['idEquipo']?><?php echo $mostrar['nombreEquipo']?></option>
-
+              <option value="<?php echo $mostrar['idEquipo']; ?>">
+                  <?php echo $mostrar['nombreEquipo']; ?>
+              </option>
             <?php }?>
-
           </select>
+
+
+          
           <label for="problema">Describe tu problema</label>
           <textarea name="problema" id="problema" class="form-control" required></textarea>
           
