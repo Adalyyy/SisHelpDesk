@@ -5,7 +5,7 @@
 <div class="container">
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
-        <h1 class="fw-light">Reportes admin</h1>
+        <h1 class="fw-light">Gestionar reportesde usuarios</h1>
           <p class="lead">
             <hr>
             <div id="tablaReporteAdminLoad"></div>
@@ -17,6 +17,7 @@
 </div>
 
 <?php include_once 'footer.php';
+      include 'reportesAdmin/modalAgregarSolucion.php'
 ?>
 
 <script src="../public/js/reportesAdmin/reportesAdmin.js"></script>
