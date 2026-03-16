@@ -8,7 +8,9 @@ function actualizarDatosPersonales(){
             respuesta=respuesta.trim();
 
             if(respuesta==1){
+                
                 Swal.fire(":)","Actualizo sus datos con exito","success");
+                location.reload();
             }else{
                 Swal.fire(":(","No se pudo realizar la actualizacion, error:" + respuesta ,"error");
             }
