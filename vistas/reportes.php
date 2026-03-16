@@ -5,13 +5,24 @@
 <div class="container">
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
-      <h1 class="fw-light">Reportes admin</h1>
-      <p class="lead">Contenido!</p>   
+        <h1 class="fw-light">Reportes admin</h1>
+          <p class="lead">
+            <hr>
+            <div id="tablaReporteAdminLoad"></div>
+      
+
+          </p> 
+    </div>    
   </div>
 </div>
 
 <?php include_once 'footer.php';
+?>
+
+<script src="../public/js/reportesAdmin/reportesAdmin.js"></script>
+<?php
    }else{
       header("location:../index.html");
    }
  ?>
+ 

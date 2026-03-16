@@ -12,7 +12,7 @@ function agregarNuevoReporte(){
             if (respuesta==1){
                 $('#tablaReporteClienteLoad').load("reportesClientes/tablaReporteCliente.php");
                 $('#frmNuevoReporte')[0].reset();
-                Swal.fire("Agregado con exito", "success");
+                Swal.fire(":)","Agregado con exito", "success");
             }else{
                 Swal.fire("Error al agregar "+ respuesta, "error");
             }
