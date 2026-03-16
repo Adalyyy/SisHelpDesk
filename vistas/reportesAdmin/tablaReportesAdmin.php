@@ -74,7 +74,7 @@
                 if($mostrar['solucion']==""){
                 ?>
                 <button class="btn btn-danger btn-sm"
-                    onclick="eliminarReporteCliente(<?php echo $mostrar['idReporte']?>)">
+                    onclick="eliminarReporteAdmin(<?php echo $mostrar['idReporte']?>)">
                     Eliminar
                 </button>
 
