@@ -1,7 +1,7 @@
 <?php include_once 'header.php';
   if(isset($_SESSION['usuario']) &&
    $_SESSION['usuario']['rol']== 1 ||  $_SESSION['usuario']['rol']== 2){  
-      $idUsuario=$_SESSION['usuario']['id'];
+    $idUsuario=$_SESSION['usuario']['id'];
  ?>
 
 <!-- Page Content -->
