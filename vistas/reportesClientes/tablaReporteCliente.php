@@ -33,7 +33,7 @@
      $respuesta = mysqli_query($conexion, $sql);
 ?>
 
-<table class="table table-sm dt-responsive nowrap"
+<table class="table table-sm dt-responsive nowrap  table-bordered"
         id="tablaReporteClienteDataTable"  style="width:100%">
     <thead>
         <th>#</th>
@@ -58,7 +58,7 @@
             <td>
                 <?php
                 $estatus= $mostrar['estatus'];
-                $cadenaestatus='<div class="alert alert-danger" role="alert">
+                $cadenaestatus='<div class="alert alert-success" role="alert">
                                 Abierto
                                 </div>';
 
@@ -72,9 +72,17 @@
             </td>
             <td><?php echo $mostrar['solucion']?></td>
             <td>
-                <button class="btn btn-danger btn-sm">
-                     Eliminar
+                <?php
+                if($mostrar['solucion']==""){
+                ?>
+                <button class="btn btn-danger btn-sm"
+                    onclick="eliminarReporteCliente(<?php echo $mostrar['idReporte']?>)">
+                    Eliminar
                 </button>
+
+                <?php
+                }
+                ?>
             </td>
 
         </tr>

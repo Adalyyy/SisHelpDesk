@@ -28,7 +28,7 @@ function asignarEquipo(){
 function eliminarAsignacion(idAsignacion){
         Swal.fire({
         title: "Estas seguro de eliminar este registro?",
-        text: "Una vez eliminido no sepodra recuperar!",
+        text: "Una vez eliminado no se podra recuperar!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
