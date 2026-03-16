@@ -36,6 +36,15 @@ function eliminarReporteAdmin(idReporte){
 }
 
 function obtenerDatosSolucion(idReporte){
+    $.ajax({
+        type:"POST",
+        data:'idReporte=' + idReporte,
+        url: "../procesos/reportesAdmin/obtenerSolucion.php",
+        success: function(respuesta){
+            console.log(respuesta);
+
+        }
+    });
 
 
 }

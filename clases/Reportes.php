@@ -27,5 +27,21 @@ class Reportes extends Conexion {
         return $respuesta;
 
     }
+
+    public function obtenerSolucion($idReporte){
+        $conexion = Conexion::conectar();
+        $sql = "SELECT solucion_problema 
+                    FROM t_reportes 
+                    WHERE id_reporte = '$idReporte' ";
+
+        $respuesta = mysqli_query($conexion, $sql);
+        $solucion = mysqli_fetch_array($respuesta)['solucion_problema'];
+        
+        $datos=array(
+            "idReporte" => $idReporte,
+            "solucion" => $solucion
+        );
+        return $datos;
+    }
 }
 ?>
