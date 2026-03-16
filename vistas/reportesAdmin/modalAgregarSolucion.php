@@ -9,6 +9,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <input type="text" name="idReporte" id="idReporte" hidden>
                     <label for="solucion">Descripcion de la solución</label>
                     <textarea name="solucion" id="solucion" class="form-control" required></textarea>
 

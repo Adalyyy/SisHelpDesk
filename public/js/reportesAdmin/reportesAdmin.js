@@ -41,8 +41,9 @@ function obtenerDatosSolucion(idReporte){
         data:'idReporte=' + idReporte,
         url: "../procesos/reportesAdmin/obtenerSolucion.php",
         success: function(respuesta){
-            console.log(respuesta);
-
+            respuesta = jQuery.parseJSON(respuesta);
+            $('#idReporte').val(respuesta['idReporte']);
+            $('#solucion').val(respuesta['solucion']);
         }
     });
 
