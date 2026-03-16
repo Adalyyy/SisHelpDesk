@@ -44,9 +44,27 @@ function obtenerDatosSolucion(idReporte){
             respuesta = jQuery.parseJSON(respuesta);
             $('#idReporte').val(respuesta['idReporte']);
             $('#solucion').val(respuesta['solucion']);
+            $('#estatus').val(respuesta['estatus']);
         }
     });
+}
 
+function agregarSolucionReporte(){
+    $.ajax({
+        type:"POST",
+        data:$('#frmAgregarSolucionReporte').serialize(),
+        url:"../procesos/reportesAdmin/actualizarSolucion.php",
+        success :function(respuesta){
+            respuesta=respuesta.trim();
+            if(respuesta==1){
+                Swal.fire(":)","Agregado con exito","success");
+                $('#tablaReporteAdminLoad').load('reportesAdmin/tablaReportesAdmin.php');
+            }else{
+                Swal.fire(":(","Fallo" + respuesta,"error");
+            }
+        }
+    });
+    return false;
 
 }
 
