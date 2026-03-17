@@ -107,8 +107,9 @@ function cambioEstatusUsuario(idUsuario, estatus){
 
             respuesta=respuesta.trim();
             if (respuesta==1){
-    
+                $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php");
                 Swal.fire(":)","Estatus cambiado con exito", "success");
+                 
             }else{
                 Swal.fire("Error al cambiar el estatus"+ respuesta, "error");
             }

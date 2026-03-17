@@ -41,7 +41,7 @@
         <th>Usuario</th>        
         <th>Sexo</th>
         <th>Reset Password</th>
-        <th>Activar</th>
+        <th>Estado:</th>
         <th>Editar</th>
         <th>Eliminar</th>
 
