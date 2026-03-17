@@ -7,4 +7,3 @@ $datos=array(
     "idUsuario"=>$_POST['idUsuarioReset']
 );
 echo $Usuarios->resetPassword($datos);
-   

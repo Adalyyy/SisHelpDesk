@@ -64,7 +64,7 @@
                 <td><?php echo $mostrar['sexo']; ?></td>
 
                 <td>
-                    <button class="btn btn-success btn-sm" 
+                    <button class="btn btn-warning btn-sm" 
                         onclick="agregarIdUsuarioReset(<?php echo $mostrar['idUsuario'] ?>)"
                         data-toggle="modal" data-target="#modalResetPassword">
                         Cambiar Password
@@ -82,13 +82,15 @@
                     <?php
                       if ($mostrar['estatus']==1){
                     ?>
-                        <button class="btn btn-info btn-sm">
+                        <button class="btn btn-success btn-sm"
+                        onclick="cambioEstatusUsuario(<?php echo $mostrar['idUsuario']  ?>,<?php echo $mostrar['estatus'] ?>)">
                             Activo
                         </button>
                     <?php 
-                        }else{
+                        }else if($mostrar['estatus']==0){
                      ?> 
-                        <button class="btn btn-info btn-sm">
+                        <button class="btn btn-dark btn-sm"
+                        onclick="cambioEstatusUsuario(<?php echo $mostrar['idUsuario']  ?>,<?php echo $mostrar['estatus'] ?>)">
                             Inactivo
                         </button>
                     <?php      

@@ -202,6 +202,26 @@
             
         }
 
+        public function cambioEstatusUsuario($idUsuario,$estatus){
+            $conexion = Conexion::conectar();
+
+            if($estatus==1){
+                $estatus=0;
+            }else{
+                $estatus=1;
+            }
+
+            $sql="UPDATE t_usuarios
+                    SET activo = ?
+                    WHERE id_usuario =?";
+            $query=$conexion->prepare($sql); 
+            $query->bind_param ('ii', $estatus, $idUsuario);  
+            $respuesta=$query-> execute();
+            $query->close();
+            return $respuesta;                                   
+
+        }
+
          
     }   
 ?>
