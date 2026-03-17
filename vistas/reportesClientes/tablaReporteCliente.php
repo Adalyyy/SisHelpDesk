@@ -94,7 +94,11 @@
 
 <script>
     $(document).ready(function(){
-        $('#tablaReporteClienteDataTable').DataTable();
+        $('#tablaReporteClienteDataTable').DataTable({
+            language :{
+                 url : "../public/datatable/es_es.json"
+            }
+        });
     });
 
 </script>
