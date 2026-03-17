@@ -58,13 +58,16 @@
             Usuarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="asignacion.php">Asignacion
-            <span class="fas fa-address-book"></span>
+          <a class="nav-link" href="asignacion.php">
+             <span class="fas fa-address-book"></span>
+             Asignacion 
           </a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="reportes.php">Reportes
-            <span class="fas fa-file"></span>
+          <a class="nav-link" href="reportes.php">
+             <span class="fas fa-file"></span>
+            Reportes
+           
           </a>
         </li>
         <?php } ?>

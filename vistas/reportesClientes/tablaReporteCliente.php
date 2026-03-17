@@ -43,7 +43,7 @@
         <th>Descripcion</th>
         <th>Estatus</th>
         <th>Solucion</th>
-        <th>Eliminar</th>
+        <th><!-- Eliminar --></th>
     </thead>
     <tbody>
     <?php 
@@ -98,9 +98,47 @@
             language :{
                  url : "../public/datatable/es_es.json"
             },
+            
             dom: 'Bfrtip',
-            buttons:
-             ['copy', 'csv', 'excel', 'pdf']
+            //buttons:
+            // ['copy', 'csv', 'excel', 'pdf'],
+
+           buttons:{
+                buttons: [
+                    {
+                        extend:'copy', 
+                        className: 'btn btn-outline-info', 
+                        text:'<i class="far fa-copy"></i> Copiar'
+                    },   
+                    
+                    {
+                        extend:'csv', 
+                        className: 'btn btn-outline-success', 
+                        text:'<i class="fas fa-file-csv"></i> CSV'
+                    },   
+
+
+                    {
+                        extend:'excel', 
+                        className: 'btn btn-outline-success', 
+                        text:'<i class="fas fa-file-excel"></i> Excel'
+                    },   
+
+                    {
+                        extend:'pdf', 
+                        className: 'btn btn-outline-danger', 
+                        text:'<i class="fas fa-file-pdf"> PDF'
+                    },   
+                ],
+
+
+                dom:{
+                    button: {
+                        className : 'btn'
+
+                    }
+                }
+            }
 
         });
     });
