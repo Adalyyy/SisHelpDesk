@@ -10,7 +10,7 @@
     <div class="card-body p-5">
       <h1 class="fw-light">Bienvenido <?php echo $_SESSION['usuario']['nombre'] ?></h1>
       <p class="lead">
-
+        
         <div class="row">
           <div class="col-sm-4">Apellido paterno: <span id="paterno"></span></div>
           <div class="col-sm-4">Apellido materno: <span id="materno"></span> </div>
