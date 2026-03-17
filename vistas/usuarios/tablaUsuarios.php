@@ -64,7 +64,8 @@
                 <td><?php echo $mostrar['sexo']; ?></td>
 
                 <td>
-                    <button class="btn btn-success btn-sm">
+                    <button class="btn btn-success btn-sm" 
+                        data-toggle="modal" data-target="#modalResetPassword">
                         Cambiar Password
                     </button>
                 </td>
