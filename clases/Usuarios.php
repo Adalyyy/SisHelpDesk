@@ -181,6 +181,21 @@
             return $idPersona;               
         }
 
+
+        public function resetPassword($datos){
+            $conexion = Conexion::conectar();
+            $sql="UPDATE t_usuarios
+                    SET password = ?
+                    WHERE id_usuario =?";
+            $query=$conexion->prepare($sql);  
+            $query->bind_param ('si', $datos['password'], 
+                                        $datos['idUsuario']);   
+            $respuesta=$query-> execute();
+            $query->close();
+            return $respuesta;
+            
+        }
+
          
     }   
 ?>

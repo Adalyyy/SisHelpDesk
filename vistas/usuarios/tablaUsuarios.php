@@ -65,6 +65,7 @@
 
                 <td>
                     <button class="btn btn-success btn-sm" 
+                        onclick="agregarIdUsuarioReset(<?php echo $mostrar['idUsuario'] ?>)"
                         data-toggle="modal" data-target="#modalResetPassword">
                         Cambiar Password
                     </button>
