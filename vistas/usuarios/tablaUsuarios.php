@@ -101,11 +101,22 @@
                             data-toggle="modal" data-target="#modalActualizarUsuarios"
                             onclick="obtenerDatosUsuario(<?php echo $mostrar['idUsuario'] ?>)"> 
                             Editar 
-                    </button></td>
-                <td>
-                    <button class="btn btn-danger btn-sm">
-                        ELiminar
                     </button>
+                </td>
+                
+                
+                <td>
+                    <form method="POST" id="frmEliminarUsuario" onsubmit="return eliminarUsuario()">
+                        <input type="text" name="idUsuarioEliminar" hidden value="<?php echo $mostrar['idUsuario']?>">
+                        <input type="text" name="idPersonaEliminar" hidden value="<?php echo $mostrar['idPersona']?>">
+
+                        <button class="btn btn-danger btn-sm">
+                        ELiminar
+                        </button>
+
+                    </form>
+                    
+                  
                 </td>
                 
             </tr>

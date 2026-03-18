@@ -15,7 +15,7 @@ function agregarNuevoUsuario(){
             if (respuesta==1){
                 $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php");
                 $('#frmAgregarUsuario')[0].reset();
-                Swal.fire("Agregado con exito", "success");
+                Swal.fire("(:","Agregado con exito", "success");
             }else{
                 Swal.fire("Error al agregar "+ respuesta, "error");
             }
@@ -113,9 +113,42 @@ function cambioEstatusUsuario(idUsuario, estatus){
             }else{
                 Swal.fire("Error al cambiar el estatus"+ respuesta, "error");
             }
-
-        
     }
 
     });
 }
+
+function eliminarUsuario(){
+
+    Swal.fire({
+        title: "Estas seguro de eliminar este usuario?",
+        text: "Se eliminara de la base de datos, si no quiere puede desactivarlo temporalmente",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, eliminar!"
+        }).then((result) => {
+            if (result.isConfirmed){
+
+                $.ajax({
+                    type:"POST",
+                    data:$('#frmEliminarUsuario').serialize(),
+                    url:"../procesos/usuarios/crud/eliminarUsuario.php",
+                    success :function(respuesta){
+
+                        respuesta=respuesta.trim();
+                        if (respuesta==1){
+                            $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php");
+                            Swal.fire(":)","Usuario eliminado con exito", "warning");
+                            
+                        }else{
+                            Swal.fire("Error al intentar eliminar a este usuario "+ respuesta, "error");
+                        }
+                    }
+                });              
+            }      
+        })  
+    return false;     
+}
+
