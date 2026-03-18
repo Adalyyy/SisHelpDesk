@@ -45,7 +45,7 @@ body {
 /* asignacionadmin */
 #tablaAsignacionDataTable {
     background: transparent !important;
-    color: #ffffff;
+    color: #f0e9e9;
 }
 
 #tablaAsignacionDataTable_wrapper {
@@ -67,7 +67,7 @@ body {
 
 #tablaReporteClienteDataTable {
     background: transparent !important;
-    color: #ffffff;
+    color: #f0e9e9;
 }
 
 #tablaReporteAdminDataTable_wrapper {
