@@ -143,7 +143,7 @@ function eliminarUsuario(){
                             Swal.fire(":)","Usuario eliminado con exito", "warning");
                             
                         }else{
-                            Swal.fire("Error al intentar eliminar a este usuario "+ respuesta, "error");
+                            Swal.fire("No se puede eliminar prque tiene información historica "+ respuesta, "error");
                         }
                     }
                 });              
