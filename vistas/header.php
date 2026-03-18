@@ -71,29 +71,36 @@
            
           </a>
         </li>
+
         <?php } ?>
-        <br>
-        <li class="nav-item dropdown">
-            <a style="color:red" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              <span class="fas fa-user-ninja"></span>
-              Usuario: <?php echo $_SESSION['usuario']['nombre']?></a>
-            <div class="dropdown-menu">
-                <a 
-                  class="dropdown-item" href="#" 
-                  data-toggle="modal" data-target="#modalActualizarDatosPersonales"
-                  onclick="obtenerDatosPersonalesInicio('<?php  echo $_SESSION['usuario']['id'];?>')">
-                  <span class="fas fa-user-edit"></span>
-                  Editar Datos
-                </a>
-                <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="../procesos/usuarios/login/salir.php">
-                  <span class="fas fa-sign-out-alt"></span>
-                  Salir</a>      
-            </div>
-        </li>
+        
+        
+        
       </ul>
     </div>
   </div>
+  <ul>
+
+    <li class="nav-item dropdown">
+              <a style="color:red" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="fas fa-user-ninja"></span>
+                Usuario: <?php echo $_SESSION['usuario']['nombre']?></a>
+              <div class="dropdown-menu">
+                  <a 
+                    class="dropdown-item" href="#" 
+                    data-toggle="modal" data-target="#modalActualizarDatosPersonales"
+                    onclick="obtenerDatosPersonalesInicio('<?php  echo $_SESSION['usuario']['id'];?>')">
+                    <span class="fas fa-user-edit"></span>
+                    Editar Datos
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../procesos/usuarios/login/salir.php">
+                    <span class="fas fa-sign-out-alt"></span>
+                    Salir</a>      
+              </div>
+      </li>
+
+  </ul>
 </nav>
 
 <?php

@@ -1,3 +1,4 @@
+
 body {
   background: url('../img/fondo.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -5,6 +6,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
 
 .container,
 .container-fluid {
@@ -27,6 +29,7 @@ body {
 
     background: rgba(248, 233, 233, 0.2) !important;
     backdrop-filter: blur(10px);
+    
 }
 
 /* usuariosadmin */
@@ -76,3 +79,9 @@ body {
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
+
+#tablaReporteAdminLoad {
+    background: transparent !important;
+    color: #f0e9e9;
+}
+
