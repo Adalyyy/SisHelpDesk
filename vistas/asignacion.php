@@ -1,8 +1,8 @@
 <?php 
-
+  include_once 'header.php';
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 2){  
       include_once '../clases/Conexion.php';
-      include_once 'header.php';
+      
       $con= new conexion();
       $conexion=$con->conectar();
 
@@ -13,7 +13,7 @@
     <div class="card-body p-5">
       <h1 class="fw-light">Asignacion de dispositivos</h1>
          <p class="lead">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modalAsignarEquipo">
+          <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalAsignarEquipo">
             Asigar equipo
           </button>
           <hr>

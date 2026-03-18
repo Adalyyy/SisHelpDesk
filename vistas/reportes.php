@@ -1,12 +1,13 @@
 <?php 
+  include_once 'header.php';
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 2){  
-    include_once 'header.php';
+    
  ?>
 <!-- Page Content -->
 <div class="container">
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
-        <h1 class="fw-light">Gestionar reportesde usuarios</h1>
+        <h1 class="fw-light">Gestionar reportes de usuarios</h1>
           <p class="lead">
             <hr>
             <div id="tablaReporteAdminLoad"></div>

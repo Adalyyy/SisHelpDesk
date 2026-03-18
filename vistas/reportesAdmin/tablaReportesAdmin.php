@@ -113,26 +113,26 @@
                 buttons: [
                     {
                         extend:'copy', 
-                        className: 'btn btn-outline-info', 
+                        className: 'btn btn-info', 
                         text:'<i class="far fa-copy"></i> Copiar'
                     },   
                     
                     {
                         extend:'csv', 
-                        className: 'btn btn-outline-success', 
+                        className: 'btn btn-success', 
                         text:'<i class="fas fa-file-csv"></i> CSV'
                     },   
 
 
                     {
                         extend:'excel', 
-                        className: 'btn btn-outline-success', 
+                        className: 'btn btn-success', 
                         text:'<i class="fas fa-file-excel"></i> Excel'
                     },   
 
                     {
                         extend:'pdf', 
-                        className: 'btn btn-outline-danger', 
+                        className: 'btn btn-danger', 
                         text:'<i class="fas fa-file-pdf"> PDF'
                     },   
                 ],

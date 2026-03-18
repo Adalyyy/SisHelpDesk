@@ -1,8 +1,11 @@
+ <?php include_once 'header.php'; 
+ ?>
 <?php 
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 2){  
+    
  ?>
 
- <?php include_once 'header.php'; ?>
+
  
 <!-- Page Content -->
 <div class="container">
@@ -10,7 +13,7 @@
     <div class="card-body p-5">
       <h1 class="fw-light">Administrar Usuarios</h1>
       <p class="lead">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarUsuarios">
+        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalAgregarUsuarios">
           Agregar Usuario
         </button>
         <hr>

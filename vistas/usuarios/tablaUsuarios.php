@@ -1,5 +1,7 @@
+
 <?php
     include_once '../../clases/Conexion.php';
+    
     
     $con = new Conexion();
     $conexion = $con->conectar();

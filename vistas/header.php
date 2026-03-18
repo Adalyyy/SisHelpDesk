@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/plantilla.css">
+    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="../public/datatable/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../public/datatable/responsive.bootstrap4.css">
     <link rel="stylesheet" href="../public/fontawesome/css/all.min.css">
@@ -71,6 +72,7 @@
           </a>
         </li>
         <?php } ?>
+        <br>
         <li class="nav-item dropdown">
             <a style="color:red" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
               <span class="fas fa-user-ninja"></span>

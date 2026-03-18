@@ -1,9 +1,12 @@
 <?php 
+include_once 'header.php';
   if(isset($_SESSION['usuario']) &&
    $_SESSION['usuario']['rol']== 1 ||  $_SESSION['usuario']['rol']== 2){  
-    include_once 'header.php';
+
+    
     $idUsuario=$_SESSION['usuario']['id'];
  ?>
+ <?php include_once 'header.php'; ?>
 
 <!-- Page Content -->
 <div class="container">

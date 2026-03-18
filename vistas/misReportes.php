@@ -1,6 +1,7 @@
 <?php 
+  include_once 'header.php';
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 1){  
-    include_once 'header.php';
+    
     include '../clases/Conexion.php';
       $con= new Conexion();
       $conexion = $con->conectar();
@@ -11,7 +12,7 @@
       <div class="card-body p-5">
         <h1 class="fw-light">Reportes de clientes</h1>
         <p class="lead">
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modalCrearReporte">
+          <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalCrearReporte">
             Crear Reporte
           </button>
           <hr>
