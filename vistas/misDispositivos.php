@@ -1,5 +1,6 @@
-<?php include_once 'header.php';
-  if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 1){  
+<?php 
+  if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 1){ 
+      include_once 'header.php'; 
       include '../clases/Asignacion.php';
       $con= new Conexion();
       $conexion = $con->conectar();

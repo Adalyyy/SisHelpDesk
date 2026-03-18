@@ -1,7 +1,8 @@
-<?php include_once 'header.php';
+<?php 
 
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 2){  
       include_once '../clases/Conexion.php';
+      include_once 'header.php';
       $con= new conexion();
       $conexion=$con->conectar();
 

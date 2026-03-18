@@ -1,5 +1,6 @@
-<?php include_once 'header.php';
+<?php 
   if(isset($_SESSION['usuario']) && $_SESSION['usuario']['rol']== 2){  
+    include_once 'header.php';
  ?>
 <!-- Page Content -->
 <div class="container">
