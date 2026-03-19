@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../public/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../public/fontawesome/css/all.css">
     <link rel="stylesheet" href="../public/datatable/buttons.dataTables.min.css">
-    
+    <link rel="shortcut icon" href="../public/img/favicon.ico" type="image/x-icon">
     <title>Help-Desk</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
   <div class="container">
     <a class="navbar-brand" href="inicio.php">
-      <img src="../public/img/logoicono.ico" width="30%">
+      <img src="../public/img/Diagrama.ico" width="30%">
       
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

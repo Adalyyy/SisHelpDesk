@@ -118,7 +118,7 @@ function cambioEstatusUsuario(idUsuario, estatus){
     });
 }
 
-function eliminarUsuario(){
+function eliminarUsuario(idUsuario,idPersona){
 
     Swal.fire({
         title: "Estas seguro de eliminar este usuario?",
@@ -133,7 +133,7 @@ function eliminarUsuario(){
 
                 $.ajax({
                     type:"POST",
-                    data:$('#frmEliminarUsuario').serialize(),
+                    data:"idUsuario=" + idUsuario + "&idPersona=" + idPersona,
                     url:"../procesos/usuarios/crud/eliminarUsuario.php",
                     success :function(respuesta){
 

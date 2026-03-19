@@ -108,17 +108,10 @@
                 
                 
                 <td>
-                    <form method="POST" id="frmEliminarUsuario" onsubmit="return eliminarUsuario()">
-                        <input type="text" name="idUsuarioEliminar" hidden value="<?php echo $mostrar['idUsuario']?>">
-                        <input type="text" name="idPersonaEliminar" hidden value="<?php echo $mostrar['idPersona']?>">
-
-                        <button class="btn btn-danger btn-sm">
-                        ELiminar
-                        </button>
-
-                    </form>
-                    
-                  
+                    <button class="btn btn-danger btn-sm" 
+                            onclick="eliminarUsuario(<?php echo $mostrar['idUsuario']?>,<?php echo $mostrar['idPersona']?>)">
+                            ELiminar
+                    </button>                   
                 </td>
                 
             </tr>
